@@ -177,7 +177,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: hsl(240, 2%, 89%, .7);
+    background-color: hsl(240, 2%, 89%, .9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -216,9 +216,14 @@
   
   .delete-modal_btn.yes {
     background-color: var(--softred);
+    background-color: red;
+    color: white
   }
   .delete-modal_btn.no { 
     background-color: var(--grayishblue);
+    background-color: green;
+    color: white
+    
   }
   
   

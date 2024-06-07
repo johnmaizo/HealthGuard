@@ -219,8 +219,8 @@ export default function Comment(props) {
       {showDeleteModal && (
         <div className="delete-modal-container">
           <div className="delete-modal">
-            <h2 className="delete-modal_title">Delete comment</h2>
-            <p className="delete-modal_content">
+            <h2 className="delete-modal_title text-black">Delete comment</h2>
+            <p className="delete-modal_content text-black">
               Are you sure you want to delete this comment? This will remove the
               comment and can't be undone.
             </p>
@@ -234,7 +234,7 @@ export default function Comment(props) {
                 No, cancel
               </button>
               <button
-                className="delete-modal_btn yes"
+                className="delete-modal_btn yes !bg-red-700"
                 onClick={() => {
                   props.deleteComment(props.id);
                 }}
