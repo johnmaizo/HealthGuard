@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { TextField, Typography, Box } from '@mui/material';
-
+import { TextField, Typography, Box, Container, Paper, Button } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import DefaultLayout from '../../layout/DefaultLayout';
 
 const SymptomChecker = () => {
@@ -136,11 +136,16 @@ const SymptomChecker = () => {
 
   return (
     <DefaultLayout>
-      <div className="w-full max-w-full rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark p-2 md:p-10">
-        <Box sx={{ padding: 4 }}>
-          <Typography variant="h4" gutterBottom>
-            Symptom Checker
-          </Typography>
+      <Container maxWidth="sm">
+        <Paper elevation={3} sx={{ padding: 4, marginTop: 4 }}>
+          <Box sx={{ textAlign: 'center', mb: 3 }}>
+            <Typography variant="h4" gutterBottom>
+              Symptom Checker
+            </Typography>
+            <Typography variant="body1" color="textSecondary">
+              Enter your symptoms to get a preliminary health assessment and prevention tips.
+            </Typography>
+          </Box>
           <TextField
             label="Enter Symptoms (comma-separated)"
             value={symptoms}
@@ -148,20 +153,25 @@ const SymptomChecker = () => {
             onKeyPress={handleKeyPress}
             fullWidth
             margin="normal"
-            sx={{ backgroundColor: 'white' }}
+            variant="outlined"
           />
+          <Box sx={{ textAlign: 'center', mt: 2 }}>
+            <Button variant="contained" color="primary" onClick={handleCheckSymptoms}>
+              Check Symptoms
+            </Button>
+          </Box>
           {result && (
-            <>
-              <Typography variant="h6" sx={{ mt: 2 }}>
+            <Paper elevation={2} sx={{ padding: 2, marginTop: 3, backgroundColor: '#f0f0f0' }}>
+              <Typography variant="h6">
                 Result: {result}
               </Typography>
-              <Typography variant="body1" sx={{ mt: 1 }}>
+              <Typography variant="body1" sx={{ marginTop: 1 }}>
                 Prevention: {prevention}
               </Typography>
-            </>
+            </Paper>
           )}
-        </Box>
-      </div>
+        </Paper>
+      </Container>
     </DefaultLayout>
   );
 };
