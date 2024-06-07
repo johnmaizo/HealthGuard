@@ -50,7 +50,7 @@ const EmergencyContacts = () => {
   return (
     <DefaultLayout>
       <div className="w-full max-w-full rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark p-2 md:p-10">
-        <h2 className=" text-4xl font-bold pb-10">Cebu Emergecy Hotlines</h2>
+        <h2 className=" text-4xl font-bold pb-10">Cebu Emergency Hotlines</h2>
 
         {
             EmergencyContacts.map((emergency, index) => {
