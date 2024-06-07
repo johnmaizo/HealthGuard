@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { TextField, Button, Typography, Box } from '@mui/material';
+import { useState } from 'react';
+import { TextField, Typography, Box } from '@mui/material';
 
 import DefaultLayout from '../../layout/DefaultLayout';
 
@@ -8,17 +8,17 @@ const SymptomChecker = () => {
   const [result, setResult] = useState(null);
 
   const diagnosisMap = {
-    fever: 'Possible Fever',
-    cough: 'Possible Respiratory Infection',
-    headache: 'Possible Headache',
-    rash: 'Possible Skin Condition',
-    nausea: 'Possible Gastrointestinal Issue',
+    'fever': 'Possible Fever',
+    'cough': 'Possible Respiratory Infection',
+    'headache': 'Possible Headache',
+    'rash': 'Possible Skin Condition',
+    'nausea': 'Possible Gastrointestinal Issue',
     'sore throat': 'Possible Throat Infection',
     'shortness of breath': 'Possible Respiratory Issue',
     'chest pain': 'Possible Cardiac Issue',
-    fatigue: 'Possible Chronic Fatigue Syndrome',
-    diarrhea: 'Possible Gastroenteritis',
-    vomiting: 'Possible Food Poisoning',
+    'fatigue': 'Possible Chronic Fatigue Syndrome',
+    'diarrhea': 'Possible Gastroenteritis',
+    'vomiting': 'Possible Food Poisoning',
     'muscle pain': 'Possible Muscle Strain',
     'joint pain': 'Possible Arthritis',
     'fever,cough': 'Possible Flu',
@@ -30,11 +30,11 @@ const SymptomChecker = () => {
     'fatigue,joint pain': 'Possible Lyme Disease',
     'diarrhea,fever': 'Possible Infectious Diarrhea',
     'vomiting,diarrhea': 'Possible Gastroenteritis',
-    'muscle pain,fatigue': 'Possible Fibromyalgia',
+    'muscle pain,fatigue': 'Possible Fibromyalgia'
   };
 
   const handleCheckSymptoms = () => {
-    const symptomList = symptoms.split(',').map((s) => s.trim().toLowerCase());
+    const symptomList = symptoms.split(',').map(s => s.trim().toLowerCase());
     let diagnosis = 'Unknown';
 
     // Check for single symptom diagnoses
@@ -54,36 +54,35 @@ const SymptomChecker = () => {
     setResult(diagnosis);
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      handleCheckSymptoms();
+    }
+  };
+
   return (
     <DefaultLayout>
       <div className="w-full max-w-full rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark p-2 md:p-10">
-        <Box sx={{ padding: 4 }}>
-          <Typography variant="h4" gutterBottom>
-            Symptom Checker
-          </Typography>
-          <TextField
-            label="Enter Symptoms (comma-separated)"
-            value={symptoms}
-            onChange={(e) => setSymptoms(e.target.value)}
-            fullWidth
-            margin="normal"
-            sx={{backgroundColor: 'white'}}
-          />
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={handleCheckSymptoms}
-            sx={{ mt: 2 }}
-          >
-            Check Symptoms
-          </Button>
-          {result && (
-            <Typography variant="h6" sx={{ mt: 2 }}>
-              Result: {result}
-            </Typography>
-          )}
-        </Box>
-      </div>
+    <Box sx={{ padding: 4 }}>
+      <Typography variant="h4" gutterBottom>
+        Symptom Checker
+      </Typography>
+      <TextField
+        label="Enter Symptoms (comma-separated)"
+        value={symptoms}
+        onChange={(e) => setSymptoms(e.target.value)}
+        onKeyPress={handleKeyPress}
+        fullWidth
+        margin="normal"
+        sx={{backgroundColor: 'white'}}
+      />
+      {result && (
+        <Typography variant="h6" sx={{ mt: 2 }}>
+          Result: {result}
+        </Typography>
+      )}
+    </Box>
+    </div>
     </DefaultLayout>
   );
 };
