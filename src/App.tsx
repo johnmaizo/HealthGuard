@@ -30,8 +30,7 @@ import TheBenefitsOfRegularExercise from './pages/BOSHEEEEEEET/HealthEducation/T
 import FitnessRoutinesForBeginners from './pages/BOSHEEEEEEET/HealthEducation/FitnessRoutinesForBeginners;';
 import MedicalAdviceWhenToSeeADoctor from './pages/BOSHEEEEEEET/HealthEducation/MedicalAdviceWhenToSeeADoctor;';
 import HealthyEatingHabitsForABetterYou from './pages/BOSHEEEEEEET/HealthEducation/HealthyEatingHabitsForABetterYou';
-
-
+import Collaborate from './pages/BOSHEEEEEEET/HealthEducation/Collaborate';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -71,7 +70,7 @@ function App() {
             </>
           }
         />
-        
+
         <Route
           path="/about"
           element={
@@ -81,7 +80,7 @@ function App() {
             </>
           }
         />
-        
+
         <Route
           path="/emergency-contacts"
           element={
@@ -101,7 +100,7 @@ function App() {
             </>
           }
         />
-        
+
         {/* <Route
           path="/health-care/maps"
           element={
@@ -111,7 +110,7 @@ function App() {
             </>
           }
         /> */}
-        
+
         <Route
           path="/symptom-checker"
           element={
@@ -130,7 +129,7 @@ function App() {
             </>
           }
         />
-        
+
         <Route
           path="/first-aid-tips"
           element={
@@ -140,7 +139,7 @@ function App() {
             </>
           }
         />
-        
+
         <Route
           path="/health-education"
           element={
@@ -150,7 +149,7 @@ function App() {
             </>
           }
         />
-        
+
         <Route
           path="/health-education/benefits-of-regular-exercise"
           element={
@@ -160,7 +159,7 @@ function App() {
             </>
           }
         />
-        
+
         <Route
           path="/health-education/fitness-routines-for-beginners"
           element={
@@ -170,7 +169,7 @@ function App() {
             </>
           }
         />
-        
+
         <Route
           path="/health-education/medical-advice"
           element={
@@ -180,7 +179,7 @@ function App() {
             </>
           }
         />
-        
+
         <Route
           path="/health-education/healthy-eating-habits"
           element={
@@ -190,9 +189,16 @@ function App() {
             </>
           }
         />
-        
-        
 
+        <Route
+          path="/collaborate"
+          element={
+            <>
+              <PageTitle title="Collaborate | Cebu Health Guard" />
+              <Collaborate />
+            </>
+          }
+        />
       </Routes>
     </>
   );

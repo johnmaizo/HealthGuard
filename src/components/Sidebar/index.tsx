@@ -25,6 +25,8 @@ import GradingIcon from '@mui/icons-material/Grading';
 import HealingIcon from '@mui/icons-material/Healing';
 import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
 
+import GroupsIcon from '@mui/icons-material/Groups';
+
 interface SidebarProps {
   sidebarOpen: boolean;
   setSidebarOpen: (arg: boolean) => void;
@@ -325,6 +327,19 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
 
               <li>
                 <NavLink
+                  to="/collaborate"
+                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    pathname.includes('collaborate') &&
+                    'bg-graydark dark:bg-meta-4'
+                  }`}
+                >
+                  <GroupsIcon />
+                  Collaboration
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
                   to="/first-aid-tips"
                   className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
                     pathname.includes('first-aid-tips') &&
@@ -335,6 +350,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   First Aid
                 </NavLink>
               </li>
+
+              
 
               {/* <li>
                 <NavLink
