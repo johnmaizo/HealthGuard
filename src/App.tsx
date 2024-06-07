@@ -54,7 +54,7 @@ function App() {
           index
           element={
             <>
-              <PageTitle title="Home Page | Health Guard" />
+              <PageTitle title="Home Page | Cebu Health Guard" />
               {/* <ECommerce /> */}
               {/* <EmergencyContacts /> */}
               <HomePage />
@@ -65,7 +65,7 @@ function App() {
           path="/health-care/maps"
           element={
             <>
-              <PageTitle title="Maps | Health Guard" />
+              <PageTitle title="Maps | Cebu Health Guard" />
               <Maps />
             </>
           }
@@ -75,7 +75,7 @@ function App() {
           path="/about"
           element={
             <>
-              <PageTitle title="About | Health Guard" />
+              <PageTitle title="About | Cebu Health Guard" />
               <AboutPage />
             </>
           }
@@ -85,7 +85,7 @@ function App() {
           path="/emergency-contacts"
           element={
             <>
-              <PageTitle title="Emergency Contacts | Health Guard" />
+              <PageTitle title="Emergency Contacts | Cebu Health Guard" />
               <EmergencyContacts />
             </>
           }
@@ -95,7 +95,7 @@ function App() {
           path="/emergency-alerts"
           element={
             <>
-              <PageTitle title="Emergency Alerts | Health Guard" />
+              <PageTitle title="Emergency Alerts | Cebu Health Guard" />
               <Events />
             </>
           }
@@ -105,7 +105,7 @@ function App() {
           path="/health-care/maps"
           element={
             <>
-              <PageTitle title="Health Care | Health Guard" />
+              <PageTitle title="Health Care | Cebu Health Guard" />
               <HealthCarePage />
             </>
           }
@@ -115,7 +115,7 @@ function App() {
           path="/symptom-checker"
           element={
             <>
-              <PageTitle title="Symptom Checker | Health Guard" />
+              <PageTitle title="Symptom Checker | Cebu Health Guard" />
               <SymptomChecker />
             </>
           }
@@ -124,7 +124,7 @@ function App() {
           path="/health-care/nearest-hospital"
           element={
             <>
-              <PageTitle title="Nearest Hospital | Health Guard" />
+              <PageTitle title="Nearest Hospital | Cebu Health Guard" />
               <HealthCarePage />
             </>
           }
@@ -134,7 +134,7 @@ function App() {
           path="/first-aid-tips"
           element={
             <>
-              <PageTitle title="First Aid Tips | Health Guard" />
+              <PageTitle title="First Aid Tips | Cebu Health Guard" />
               <FirstAidPage />
             </>
           }
@@ -144,7 +144,7 @@ function App() {
           path="/health-education"
           element={
             <>
-              <PageTitle title="Health Education | Health Guard" />
+              <PageTitle title="Health Education | Cebu Health Guard" />
               <HealthEducPage />
             </>
           }
@@ -154,7 +154,7 @@ function App() {
           path="/health-education/benefits-of-regular-exercise"
           element={
             <>
-              <PageTitle title="The Benefits of Regular Exercise | Health Guard" />
+              <PageTitle title="The Benefits of Regular Exercise | Cebu Health Guard" />
               <TheBenefitsOfRegularExercise />
             </>
           }
@@ -164,7 +164,7 @@ function App() {
           path="/health-education/fitness-routines-for-beginners"
           element={
             <>
-              <PageTitle title="Fitness Routines For Beginners | Health Guard" />
+              <PageTitle title="Fitness Routines For Beginners | Cebu Health Guard" />
               <FitnessRoutinesForBeginners />
             </>
           }
@@ -174,7 +174,7 @@ function App() {
           path="/health-education/medical-advice"
           element={
             <>
-              <PageTitle title="Medical Advice When To See A Doctor | Health Guard" />
+              <PageTitle title="Medical Advice When To See A Doctor | Cebu Health Guard" />
               <MedicalAdviceWhenToSeeADoctor />
             </>
           }
@@ -184,7 +184,7 @@ function App() {
           path="/health-education/healthy-eating-habits"
           element={
             <>
-              <PageTitle title="Healthy Eating Habits for a Better You | Health Guard" />
+              <PageTitle title="Healthy Eating Habits for a Better You | Cebu Health Guard" />
               <HealthyEatingHabitsForABetterYou />
             </>
           }
