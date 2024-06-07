@@ -91,7 +91,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           {/* <img src={Logo} alt="Logo" /> */}
             <span className=' inline-flex items-center gap-3'>
               <img src={Logo} alt="logo" width={60} />
-              <span className=' text-xl font-semibold'>Health Guard</span>
+              <span className=' text-xl font-semibold'>Cebu Health Guard</span>
               </span>
         </NavLink>
 
