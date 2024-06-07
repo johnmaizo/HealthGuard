@@ -57,7 +57,8 @@ function App() {
               <PageTitle title="Home Page | Cebu Health Guard" />
               {/* <ECommerce /> */}
               {/* <EmergencyContacts /> */}
-              <HomePage />
+              {/* <HomePage /> */}
+              <HealthEducPage />
             </>
           }
         />

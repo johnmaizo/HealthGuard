@@ -6,7 +6,8 @@ const FitnessRoutinesForBeginners = () => {
     <DefaultLayout>
     <div className="w-full max-w-full rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark p-2 md:p-10">
       <h1 className=" text-3xl font-bold pb-3">Fitness Routines for Beginners</h1>
-      <Link to="/health-education" className="hover:underline text-blue-700 font-semibold py-5 block">Go Back</Link>
+      {/* <Link to="/health-education" className="hover:underline text-blue-700 font-semibold py-5 block">Go Back</Link> */}
+      <Link to="/" className="hover:underline text-blue-700 font-semibold py-5 block">Go Back</Link>
       <p>
         Starting a fitness routine can be daunting, especially if you are new to exercise. However, with the right plan and mindset, you can set yourself up for success. Here are some beginner-friendly fitness routines to help you get started on your journey to better health.
       </p>

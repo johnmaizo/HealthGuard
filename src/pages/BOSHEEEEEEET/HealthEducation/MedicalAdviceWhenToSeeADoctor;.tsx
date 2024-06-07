@@ -6,7 +6,8 @@ const MedicalAdviceWhenToSeeADoctor = () => {
     <DefaultLayout>
       <div className="w-full max-w-full rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark p-2 md:p-10">
         <h1 className=" text-3xl font-bold py-3">Medical Advice: When to See a Doctor</h1>
-        <Link to="/health-education" className="hover:underline text-blue-700 font-semibold py-5 block">Go Back</Link>
+        {/* <Link to="/health-education" className="hover:underline text-blue-700 font-semibold py-5 block">Go Back</Link> */}
+        <Link to="/" className="hover:underline text-blue-700 font-semibold py-5 block">Go Back</Link>
         <p>
           Knowing when to seek medical advice is crucial for maintaining your
           health and preventing minor issues from becoming major problems. While

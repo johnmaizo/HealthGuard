@@ -6,7 +6,8 @@ const TheBenefitsOfRegularExercise = () => {
     <DefaultLayout>
     <div className="w-full max-w-full rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark p-2 md:p-10">
       <h1 className=" text-3xl font-bold py-3">The Benefits of Regular Exercise</h1>
-      <Link to="/health-education" className="hover:underline text-blue-700 font-semibold py-5 block">Go Back</Link>
+      {/* <Link to="/health-education" className="hover:underline text-blue-700 font-semibold py-5 block">Go Back</Link> */}
+      <Link to="/" className="hover:underline text-blue-700 font-semibold py-5 block">Go Back</Link>
       <p>
         Regular exercise is one of the most important things you can do for your health. It has numerous benefits that can improve both your physical and mental well-being. Here are some of the top benefits of incorporating regular exercise into your daily routine:
       </p>

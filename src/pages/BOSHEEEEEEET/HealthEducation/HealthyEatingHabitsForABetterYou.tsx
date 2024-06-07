@@ -7,7 +7,8 @@ const HealthyEatingHabitsForABetterYou = () => {
         <DefaultLayout>
         <div className="w-full max-w-full rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark p-2 md:p-10">
         <h1 className=" text-3xl font-bold py-3">Healthy Eating Habits for a Better You</h1>
-        <Link to="/health-education" className="hover:underline text-blue-700 font-semibold py-5 block">Go Back</Link>
+        {/* <Link to="/health-education" className="hover:underline text-blue-700 font-semibold py-5 block">Go Back</Link> */}
+        <Link to="/" className="hover:underline text-blue-700 font-semibold py-5 block">Go Back</Link>
         <p>
           Incorporate these healthy eating habits into your diet to enhance your health. Developing good eating habits is crucial for maintaining a healthy lifestyle and can significantly impact your overall well-being. Here are some tips to help you get started.
         </p>
