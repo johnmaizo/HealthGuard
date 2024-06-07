@@ -17,7 +17,7 @@ const FirstAidPage = () => {
 
         <span>
           {' '}
-          2
+          <span className=' text-3xl font-bold'>2</span>
           <p>
             If the person appears unresponsive, CHECK for responsiveness,
             breathing, life-threatening bleeding or other life-threatening
@@ -27,7 +27,7 @@ const FirstAidPage = () => {
         <p>Note: CHECK for no more than 10 seconds</p>
         <hr style={{ width: '100%' }} />
         <span>
-          3A{' '}
+          <span className=' text-3xl font-bold'>3A</span>{' '}
           <p>
             If the person does not respond, responds but is not fully awake, is
             not breathing or is only gasping, or has life-threatening bleeding
@@ -52,7 +52,7 @@ const FirstAidPage = () => {
         <hr style={{ width: '100%' }} />
         <span>
           {' '}
-          3B{' '}
+          <span className=' text-3xl font-bold'>3B</span>{' '}
           <p>
             If the person is responsive or responds to stimulation and is fully
             awake and does not appear to have a life-threatening condition:
