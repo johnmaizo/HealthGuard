@@ -1,0 +1,200 @@
+import { useEffect, useState } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
+
+import Loader from './common/Loader';
+import PageTitle from './components/PageTitle';
+import SignIn from './pages/Authentication/SignIn';
+import SignUp from './pages/Authentication/SignUp';
+import Calendar from './pages/Calendar';
+import Chart from './pages/Chart';
+import ECommerce from './pages/Dashboard/ECommerce';
+import FormElements from './pages/Form/FormElements';
+import FormLayout from './pages/Form/FormLayout';
+import Profile from './pages/Profile';
+import Settings from './pages/Settings';
+import Tables from './pages/Tables';
+import Alerts from './pages/UiElements/Alerts';
+import Buttons from './pages/UiElements/Buttons';
+import Programs from './pages/Maps';
+import Events from './pages/Events';
+import EmergencyContacts from './pages/BOSHEEEEEEET/EmergencyContacts';
+import SheltersPage from './pages/BOSHEEEEEEET/SheltersPage';
+import AboutPage from './pages/BOSHEEEEEEET/AboutPage';
+import HealthCarePage from './pages/SubPages/HealthCarePage';
+import HomePage from './pages/SubPages/HomePage';
+import Maps from './pages/Maps';
+import SymptomChecker from './pages/BOSHEEEEEEET/SymptomChecker';
+import FirstAidPage from './pages/BOSHEEEEEEET/FirstAidPage';
+import HealthEducPage from './pages/BOSHEEEEEEET/HealthEducPage';
+import TheBenefitsOfRegularExercise from './pages/BOSHEEEEEEET/HealthEducation/TheBenefitsOfRegularExercise';
+import FitnessRoutinesForBeginners from './pages/BOSHEEEEEEET/HealthEducation/FitnessRoutinesForBeginners;';
+import MedicalAdviceWhenToSeeADoctor from './pages/BOSHEEEEEEET/HealthEducation/MedicalAdviceWhenToSeeADoctor;';
+import HealthyEatingHabitsForABetterYou from './pages/BOSHEEEEEEET/HealthEducation/HealthyEatingHabitsForABetterYou';
+
+
+
+function App() {
+  const [loading, setLoading] = useState<boolean>(true);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1000);
+  }, []);
+
+  return loading ? (
+    <Loader />
+  ) : (
+    <>
+      <Routes>
+        <Route
+          index
+          element={
+            <>
+              <PageTitle title="Home Page | Health Guard" />
+              {/* <ECommerce /> */}
+              {/* <EmergencyContacts /> */}
+              <HomePage />
+            </>
+          }
+        />
+        <Route
+          path="/health-care/maps"
+          element={
+            <>
+              <PageTitle title="Maps | Health Guard" />
+              <Maps />
+            </>
+          }
+        />
+        
+        <Route
+          path="/about"
+          element={
+            <>
+              <PageTitle title="About | Health Guard" />
+              <AboutPage />
+            </>
+          }
+        />
+        
+        <Route
+          path="/emergency-contacts"
+          element={
+            <>
+              <PageTitle title="Emergency Contacts | Health Guard" />
+              <EmergencyContacts />
+            </>
+          }
+        />
+
+        <Route
+          path="/emergency-alerts"
+          element={
+            <>
+              <PageTitle title="Emergency Alerts | Health Guard" />
+              <Events />
+            </>
+          }
+        />
+        
+        {/* <Route
+          path="/health-care/maps"
+          element={
+            <>
+              <PageTitle title="Health Care | Health Guard" />
+              <HealthCarePage />
+            </>
+          }
+        /> */}
+        
+        <Route
+          path="/symptom-checker"
+          element={
+            <>
+              <PageTitle title="Symptom Checker | Health Guard" />
+              <SymptomChecker />
+            </>
+          }
+        />
+        <Route
+          path="/health-care/nearest-hospital"
+          element={
+            <>
+              <PageTitle title="Nearest Hospital | Health Guard" />
+              <HealthCarePage />
+            </>
+          }
+        />
+        
+        <Route
+          path="/first-aid-tips"
+          element={
+            <>
+              <PageTitle title="First Aid Tips | Health Guard" />
+              <FirstAidPage />
+            </>
+          }
+        />
+        
+        <Route
+          path="/health-education"
+          element={
+            <>
+              <PageTitle title="Health Education | Health Guard" />
+              <HealthEducPage />
+            </>
+          }
+        />
+        
+        <Route
+          path="/health-education/benefits-of-regular-exercise"
+          element={
+            <>
+              <PageTitle title="The Benefits of Regular Exercise | Health Guard" />
+              <TheBenefitsOfRegularExercise />
+            </>
+          }
+        />
+        
+        <Route
+          path="/health-education/fitness-routines-for-beginners"
+          element={
+            <>
+              <PageTitle title="Fitness Routines For Beginners | Health Guard" />
+              <FitnessRoutinesForBeginners />
+            </>
+          }
+        />
+        
+        <Route
+          path="/health-education/medical-advice"
+          element={
+            <>
+              <PageTitle title="Medical Advice When To See A Doctor | Health Guard" />
+              <MedicalAdviceWhenToSeeADoctor />
+            </>
+          }
+        />
+        
+        <Route
+          path="/health-education/healthy-eating-habits"
+          element={
+            <>
+              <PageTitle title="Healthy Eating Habits for a Better You | Health Guard" />
+              <HealthyEatingHabitsForABetterYou />
+            </>
+          }
+        />
+        
+        
+
+      </Routes>
+    </>
+  );
+}
+
+export default App;
