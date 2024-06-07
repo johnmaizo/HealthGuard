@@ -1,8 +1,6 @@
 // import DefaultLayout from '../layout/DefaultLayout';
 import DefaultLayout from '../../layout/DefaultLayout';
 
-
-
 const EmergencyContacts = () => {
   const EmergencyContacts = [
     {
@@ -49,24 +47,25 @@ const EmergencyContacts = () => {
 
   return (
     <DefaultLayout>
-      <div className="w-full max-w-full rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark p-2 md:p-10">
-        <h2 className=" text-4xl font-bold pb-10">Cebu Emergency Hotlines</h2>
+      <div className="w-full max-w-full rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark p-5 md:p-10">
+        <h2 className=" text-5xl font-bold pb-10 text-center">Cebu Emergency Hotlines</h2>
 
-        {
-            EmergencyContacts.map((emergency, index) => {
-                return(
-                    <div key={index} className=' my-[2em]'>
-                        <h3 className=' text-3xl font-bold'>{emergency.name}</h3>
-                        {emergency.title && <p className=' font-semibold py-5'>{emergency.title}</p>}
-                        {emergency.subs.map((sub,index) => {
-                            return(
-                                <p key={index}>{sub}</p>
-                            )
-                        })}
-                    </div>
-                )
-            })
-        }
+        <hr />
+
+        {EmergencyContacts.map((emergency, index) => {
+          return (
+            <div key={index} className=" my-[2em]">
+              <h3 className=" text-3xl font-bold">{emergency.name}</h3>
+              {emergency.title && (
+                <p className=" font-semibold py-5">{emergency.title}</p>
+              )}
+              {emergency.subs.map((sub, index) => {
+                return <p key={index}>{sub}</p>;
+              })}
+              <hr className=' my-5' />
+            </div>
+          );
+        })}
       </div>
     </DefaultLayout>
   );
